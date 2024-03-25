@@ -8,7 +8,7 @@ export default function Login(){
   const navigate = useNavigate();
 
   const hadleSignInClick = () =>{
-    navigate('/');
+    navigate('/login');
   }
 
   const handleSignUpClick = () =>{
