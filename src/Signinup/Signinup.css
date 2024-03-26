@@ -1,0 +1,27 @@
+.logo_img{
+  padding: 19%;
+  margin-top: 40%;
+  margin-bottom: 50%;
+  width: 250px;
+}
+
+.SignInBtn,
+.SignUpBtn{
+  width: 90%;
+  height: 47px;
+  margin-left: 5%;
+  margin-bottom: 13%;
+  border-radius: 7px;
+  border: none;
+  background-color: #4198FF;
+  color: #fff;
+  font-weight: 600;
+}
+
+.SignUpBtn{
+  background-color: #fff;
+  color: #000;
+  border-color: #4198FF;
+  border-style: solid;
+  border-width: 2px;
+}
