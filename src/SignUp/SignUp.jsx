@@ -18,7 +18,6 @@ export default function SignUp() {
       setPasswordMatchError(true);
     } else {
       setPasswordMatchError(false);
-      // Do sign up logic here
       alert("회원가입이 완료되었습니다.");
     }
   }
