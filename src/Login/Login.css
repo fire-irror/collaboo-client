@@ -42,3 +42,8 @@ input{
   font-size: 13px;
   margin-left: 68%;
 }
+input:focus{
+  border-color: #4198FF;
+  outline: none;
+  border-width: 2px;
+}
