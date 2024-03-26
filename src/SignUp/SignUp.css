@@ -1,0 +1,53 @@
+
+
+.backBtn{
+  border: none;
+  margin-top: 10%;
+  background-color: #fff;
+}
+
+.title{
+  position: absolute;
+  top: 3.5%;
+  margin-left: 38%;
+  font-size: 16px;
+}
+.wrapInputContent{
+  margin-top: 20%;
+}
+
+.emailP,
+.nameP,
+.passP,
+.passCheckP{
+  margin-bottom: 0;
+  margin-left: 4%;
+  margin-top: 6%;
+  font-size: 15px;
+}
+
+.emailInput,
+.nameInput,
+.passInput,
+.passCheckInput
+{
+  margin-top: 3%;
+}
+
+.SignUp_Btn{
+  border: none;
+  background-color: #4198FF;
+  color: #fff;
+  width: 340px;
+  height: 45px;
+  border-radius: 7px;
+  margin-left:3%;
+  margin-top: 15%;
+}
+.errorText{
+  margin-top: 0;
+  margin-left: 5%;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(255, 98, 98);
+}

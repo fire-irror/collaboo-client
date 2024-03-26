@@ -12,7 +12,7 @@ export default function Login(){
   }
 
   const handleSignUpClick = () =>{
-    navigate('/');
+    navigate('/signup');
   }
 
   return(
