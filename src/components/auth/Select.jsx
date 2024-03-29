@@ -1,9 +1,9 @@
 import React from "react";
-import './Signinup.css'
-import logo from '../assets/logo.svg'
+import '../../css/auth/Select.css'
+import logo from '../../assets/logo.svg'
 import { useNavigate } from "react-router-dom";
 
-export default function Login(){
+export default function Select(){
 
   const navigate = useNavigate();
 
@@ -12,7 +12,7 @@ export default function Login(){
   }
 
   const handleSignUpClick = () =>{
-    navigate('/signup');
+    navigate('/join');
   }
 
   return(
@@ -24,5 +24,4 @@ export default function Login(){
       </div>
     </div>
   )
-
 }
