@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../SignUp/SignUp.css'
+import '../../css/auth/Join.css'
 import { CgChevronLeft } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 
@@ -7,7 +7,7 @@ function CustomIcon({ size }) {
   return <CgChevronLeft size={size} />;
 }
 
-export default function SignUp() {
+export default function Join() {
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");

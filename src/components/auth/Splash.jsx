@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import './Splash.css'; 
-import logo from '../assets/logo.svg'
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import '../../css/auth/Splash.css'
+import logo from '../../assets/logo.svg'
+import { useNavigate } from "react-router-dom"
 
 function Splash() {
   
@@ -12,7 +12,7 @@ function Splash() {
     
     const timer = setTimeout(() => {
       setLoading(false);
-      navigate('/signinup')
+      navigate('/select')
     }, 3000 );
 
     

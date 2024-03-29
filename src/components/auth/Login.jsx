@@ -1,6 +1,6 @@
 import React from "react";
-import '../Login/Login.css'
-import logo from '../assets/logo.svg'
+import '../../css/auth/Login.css';
+import logo from '../../assets/logo.svg'
 import { useState } from "react";
 
 export default function Login() {
@@ -9,15 +9,15 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [notAllow, setNotAllow] = useState(true);
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-    checkFormCompletion(event.target.value, password);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    checkFormCompletion(e.target.value, password);
   };
 
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-    checkFormCompletion(email, event.target.value);
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    checkFormCompletion(email, e.target.value);
   };
 
   const checkFormCompletion = (email, password) => {

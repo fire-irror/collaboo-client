@@ -1,17 +1,18 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Signinup from './Signinup/Signinup'
-import Login from './Login/Login';
-import SignUp from './SignUp/SignUp';
-import Splash from './Splash/Splash';
+import LoginPage from './pages/LoginPage';
+import JoinPage from './pages/JoinPage';
+import SelectPage from './pages/SelectPage';
+import SplashScreen from './pages/SplashScreen';
+
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={< Splash/>} />
-        <Route path='/signinup' element={<Signinup />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<SignUp />} />
+        <Route path='/' element={<SplashScreen/>}/>
+        <Route path='/select' element={<SelectPage/>}/>
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/join' element={<JoinPage/>} />
       </Routes>
     </Router>
   );
