@@ -9,7 +9,6 @@ export default function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [notAllow, setNotAllow] = useState(true);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
