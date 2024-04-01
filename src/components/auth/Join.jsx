@@ -32,7 +32,7 @@ export default function Join() {
   const hadleSignUpClick = async () => {
     if (password !== confirmPassword) {
       setPasswordMatchError(true);
-      return; // 비밀번호가 일치하지 않으면 함수 종료
+      return; 
     }
     const newUser = { name, email, password }
     try {
@@ -95,7 +95,7 @@ export default function Join() {
             value={password}
             onChange={(e) => {
               setPassword(e.target.value);
-              setPasswordMatchError(false); // 비밀번호가 변경될 때 에러 상태를 초기화
+              setPasswordMatchError(false); 
             }}
           />
 
@@ -107,7 +107,7 @@ export default function Join() {
             value={confirmPassword}
             onChange={(e) => {
               setConfirmPassword(e.target.value);
-              setPasswordMatchError(false); // 비밀번호 확인이 변경될 때 에러 상태를 초기화
+              setPasswordMatchError(false); 
             }}
           />
           {passwordMatchError && <p className="errorText">비밀번호가 다릅니다.</p>}
