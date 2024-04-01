@@ -1,9 +1,11 @@
 import React from "react";
 import '../../css/auth/Login.css';
 import logo from '../../assets/logo.svg'
+import axios from "axios";
 import { useState } from "react";
 
 export default function Login() {
+
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,23 +13,26 @@ export default function Login() {
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-    checkFormCompletion(e.target.value, password);
   };
 
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-    checkFormCompletion(email, e.target.value);
   };
 
-  const checkFormCompletion = (email, password) => {
-    if (email !== '' && password !== '') {
-      setNotAllow(false);
-    } else {
-      setNotAllow(true);
-      
+
+  const handleLogin =async()=>{
+    const loggedUser={email, password}
+    try{
+      const response = await axios.post('http://localhost:8080/users/login',loggedUser)
+      if(response.status === 200){
+        alert('로그인 성공')
+      }
+    }catch(error){
+      alert('로그인 실패')
+      console.log(error)
     }
-  };
+  }
 
   return (
     <div>
@@ -48,7 +53,7 @@ export default function Login() {
       />
 
       <div className="wrap_LoginBtn">
-        <button onClick={checkFormCompletion} disabled={notAllow} className="LoginBtn">
+        <button onClick={handleLogin} className="LoginBtn">
           로그인
         </button>
         <span className="search">아이디/비번 찾기</span>
