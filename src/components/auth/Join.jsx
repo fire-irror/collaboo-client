@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useState, useRef } from "react";
 import '../../css/auth/Join.css'
-import Header from "../common/Header";
 import { IoCamera } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Join() {
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState('');
@@ -14,10 +15,6 @@ export default function Join() {
   const [passwordMatchError, setPasswordMatchError] = useState(false);
   const [imageURL, setImageURL] = useState(null);
   const fileInputRef = useRef(null);
-
-  function CustomIcon({ size }) {
-    return <IoCamera size={size} />;
-  }
 
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
@@ -39,6 +36,7 @@ export default function Join() {
       const response = await axios.post('http://localhost:8080/users/join', newUser)
       if (response.status === 200) {
         alert('회원가입 성공');
+        navigate('/login')
       }
     } catch (err) {
       alert('실패')
@@ -48,15 +46,13 @@ export default function Join() {
 
   return (
     <div>
-      <Header />
-
       <div className="profile">
         <div className="profileImageContainer">
           {imageURL ? (
             <img src={imageURL} alt="Profile" className="profileImage" />
           ) : (
             <button onClick={handleUploadButtonClick} className="uploadBtn">
-              <CustomIcon size={40} />
+              <IoCamera size={40} />
             </button>
           )}
           <input

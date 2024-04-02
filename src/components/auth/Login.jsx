@@ -3,9 +3,10 @@ import '../../css/auth/Login.css';
 import logo from '../../assets/logo.svg'
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,10 +27,11 @@ export default function Login() {
       const response = await axios.post('http://localhost:8080/users/login',loggedUser)
       if(response.status === 200){
         alert('로그인 성공')
+        navigate('/main')
       }
     }catch(error){
       alert('로그인 실패')
-      console.log(error)
+      alert('비밀번호 혹은 이메일을 다시 입력해주세요')
     }
   }
 
