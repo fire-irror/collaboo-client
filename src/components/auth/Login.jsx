@@ -1,33 +1,39 @@
 import React from "react";
 import '../../css/auth/Login.css';
 import logo from '../../assets/logo.svg'
+import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [notAllow, setNotAllow] = useState(true);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-    checkFormCompletion(e.target.value, password);
   };
 
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-    checkFormCompletion(email, e.target.value);
   };
 
-  const checkFormCompletion = (email, password) => {
-    if (email !== '' && password !== '') {
-      setNotAllow(false);
-    } else {
-      setNotAllow(true);
-      
+
+  const handleLogin =async()=>{
+    const loggedUser={email, password}
+    try{
+      const response = await axios.post('http://localhost:8080/users/login',loggedUser)
+      if(response.status === 200){
+        alert('로그인 성공')
+        navigate('/main')
+      }
+    }catch(error){
+      alert('로그인 실패')
+      alert('비밀번호 혹은 이메일을 다시 입력해주세요')
     }
-  };
+  }
 
   return (
     <div>
@@ -48,7 +54,7 @@ export default function Login() {
       />
 
       <div className="wrap_LoginBtn">
-        <button onClick={checkFormCompletion} disabled={notAllow} className="LoginBtn">
+        <button onClick={handleLogin} className="LoginBtn">
           로그인
         </button>
         <span className="search">아이디/비번 찾기</span>

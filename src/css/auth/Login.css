@@ -1,6 +1,12 @@
+*{
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
 .LoginLogoImg{
   margin-left: 19%;
-  margin-top: 45%;
+  margin-top: 40%;
   margin-bottom: 20%;
   width: 250px;
 }
@@ -9,7 +15,7 @@ input,
 .LoginBtn{
   width: 320px;
   height: 49px;
-  margin-left: 3%;
+  margin-left: 5%;
   border-radius: 10px;
   border-style: solid;
   margin-bottom: 3%;

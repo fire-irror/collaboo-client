@@ -3,6 +3,8 @@ import LoginPage from './pages/LoginPage';
 import JoinPage from './pages/JoinPage';
 import SelectPage from './pages/SelectPage';
 import SplashScreen from './pages/SplashScreen';
+import MainPage from './pages/MainPage';
+import PostPage from './pages/PostPage';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
         <Route path='/select' element={<SelectPage/>}/>
         <Route path='/login' element={<LoginPage />} />
         <Route path='/join' element={<JoinPage/>} />
+        <Route path='/main' element={<MainPage/>} />
+        <Route path='/post' element={<PostPage/>} />
       </Routes>
     </Router>
   );

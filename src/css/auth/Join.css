@@ -1,17 +1,21 @@
-.backBtn{
-  border: none;
-  margin-top: 10%;
-  background-color: #fff;
+.profile{
+  width : 100px;
+  height : 100px;
+  border-radius: 50%;
+  background-color: rgba(65, 152, 255, 0.66);
+  margin-left: 35%;
+  margin-top: 6%;
 }
 
 .title{
   position: absolute;
-  top: 3.5%;
-  margin-left: 38%;
-  font-size: 16px;
+  top: 7%;
+  margin-left: 40%;
+  font-size: 17px;
 }
+
 .wrapInputContent{
-  margin-top: 20%;
+  margin-top: 13%;
 }
 
 .emailP,
@@ -19,9 +23,9 @@
 .passP,
 .passCheckP{
   margin-bottom: 0;
-  margin-left: 4%;
-  margin-top: 6%;
+  margin-left: 7%;
   font-size: 15px;
+  margin-top: 3%;
 }
 
 .emailInput,
@@ -30,6 +34,7 @@
 .passCheckInput
 {
   margin-top: 3%;
+  margin-left: 5%;
 }
 
 .SignUp_Btn{
@@ -39,13 +44,35 @@
   width: 340px;
   height: 45px;
   border-radius: 7px;
-  margin-left:3%;
+  margin-left:5%;
   margin-top: 15%;
 }
 .errorText{
   margin-top: 0;
+  margin-bottom: 0;
   margin-left: 5%;
   font-size: 13px;
   font-weight: 600;
   color: rgb(255, 98, 98);
+}
+
+.profileImageContainer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uploadBtn{
+  margin-left: 30%;
+  margin-top: 28%;
+  border: none;
+  background-color:  rgba(65, 151, 255, 0);
 }
