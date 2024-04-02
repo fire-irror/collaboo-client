@@ -31,6 +31,11 @@ export default function Post() {
 
           <p className="PostInputEndDay">마감일</p>
           <input className="endDay" />
+
+          <p className="projectContent">프로젝트 소개</p>
+          <textarea className="projectTextarea"/>
+
+          <button className="postCreate">프로젝트 생성</button>
         </div>
       </div>
     </div>
