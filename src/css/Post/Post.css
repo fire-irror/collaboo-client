@@ -5,6 +5,21 @@
   font-size: 17px;
 }
 
+.projectName,
+.startDay,
+.endDay{
+  width: 320px;
+  height: 49px;
+  margin-left: 5%;
+  border-radius: 10px;
+  border-style: solid;
+  margin-bottom: 3%;
+  margin-top: 7%;
+  border-color: rgba(0, 0, 0, 0.34);
+  border-width: 1px;
+  padding-left:15px ;
+}
+
 .PostInput{
   margin-top: 10%;
 }
@@ -72,3 +87,32 @@
   color: #fff;
   background-color: #4198FF;
 }
+
+
+/* Post.css 파일 */
+.datePickerWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.datePickerWrapper .startDay,
+.datePickerWrapper .endDay {
+  width: calc(100% - 32px); /* 아이콘 고려하여 너비 조정 */
+  height: 49px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.34);
+  border-width: 1px;
+  padding-left: 15px;
+  padding-right: 30px; /* 아이콘을 고려한 우측 패딩 추가 */
+  box-sizing: border-box; /* 패딩과 너비가 요소의 실제 너비에 포함되도록 함 */
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 5px; /* 아이콘이 잘리지 않도록 우측 간격을 축소 */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+

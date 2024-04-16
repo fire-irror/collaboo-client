@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { LuCalendar } from "react-icons/lu";
 import "../../css/Post/Post.css";
 
 export default function Post() {
   const [teamSize, setTeamSize] = useState(1);
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
 
   // 팀원 수가 변경될 때 호출되는 함수
   const handleTeamSizeChange = (event) => {
@@ -26,11 +31,29 @@ export default function Post() {
             <option value={5}>1명</option>
           </select>
 
-          <p className="PostInputStartDay">시작일</p>
-          <input className="startDay"/>
+          <div className="dateInput">
+            <p className="PostInputStartDay">시작일</p>
+            <div className="datePickerWrapper">
+              <DatePicker
+                selected={startDate} 
+                onChange={(date) => setStartDate(date)}
+                className="startDay"
+              />
+              <LuCalendar className="calendarIcon" size={30}/>
+            </div>
+          </div>
 
-          <p className="PostInputEndDay">마감일</p>
-          <input className="endDay" />
+          <div className="dateInput">
+            <p className="PostInputEndDay">마감일</p>
+            <div className="datePickerWrapper">
+              <DatePicker
+                selected={endDate}
+                onChange={(date) => setEndDate(date)}
+                className="endDay"
+              />
+              <LuCalendar className="calendarIcon" size={30} />
+            </div>
+          </div>
 
           <p className="projectContent">프로젝트 소개</p>
           <textarea className="projectTextarea"/>
