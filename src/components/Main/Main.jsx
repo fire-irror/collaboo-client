@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Mainlogo from '../../assets/header.svg';
 import '../../css/Main/Main.css';
+import { useNavigate } from "react-router-dom";
 import { LuBell } from "react-icons/lu";
 import axios from "axios";
 
@@ -15,13 +16,19 @@ const formatProjectData = (projects) => {
   });
 };
 
+
 export default function Main() {
   const [projects, setProjects] = useState([]);
+  const navigate = useNavigate();
+
+  const handleProjectBox = () => {
+    navigate('/project');
+  }
 
   //여기서 한 번만 불러서 가져오기
   useEffect(() => {
     fetchProjects();
-  }, []); 
+  }, []);
 
 
   //서버랑 연동
@@ -44,10 +51,10 @@ export default function Main() {
       </div>
       <hr />
       {projects.map(project => (
-        <div key={project.id} className="ProjectBox">
-          <h3>{project.project}</h3>
-          <p>{project.description}</p>
-          <p>{project.start}~{project.end}</p>
+        <div key={project.id} className="ProjectBox" onClick={handleProjectBox}>
+          <h3 className="ProjectName">{project.project}</h3>
+          <p className="ProjectDescription">{project.description}</p>
+          <p className="ProjectDate">{project.start}~{project.end}</p>
         </div>
       ))}
     </div>

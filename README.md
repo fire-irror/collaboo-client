@@ -5,3 +5,6 @@
 
 *npm install dayjs
 datepicker format
+
+*npm i react-circular-progressbar
+퍼센트바 만들기

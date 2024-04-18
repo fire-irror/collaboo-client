@@ -33,8 +33,15 @@
 .passInput,
 .passCheckInput
 {
+  width: 320px;
+  height: 49px;
+  border-radius: 10px;
+  border-style: solid;
+  margin-bottom: 3%;
+  border-color: rgba(0, 0, 0, 0.34);
+  border-width: 1px;
   margin-top: 3%;
-  margin-left: 5%;
+  margin-left: 7%;
 }
 
 .SignUp_Btn{
@@ -71,7 +78,7 @@
 }
 
 .uploadBtn{
-  margin-left: 30%;
+  margin-left: 25%;
   margin-top: 28%;
   border: none;
   background-color:  rgba(65, 151, 255, 0);
