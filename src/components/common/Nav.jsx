@@ -40,13 +40,13 @@ export default function Nav() {
     navigate('/main');
   }
 
-  // const handleSearchClick = () => {
-  //   setActiveIcon('search');
-  // }
+  const handleSearchClick = () => {
+    setActiveIcon('search');
+  }
 
-  // const handleChatClick = () => {
-  //   setActiveIcon('chat');
-  // }
+  const handleChatClick = () => {
+    setActiveIcon('chat');
+  }
 
   return (
     <div className='Nav_bar'>
