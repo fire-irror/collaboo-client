@@ -25,14 +25,14 @@
 }
 
 .PostInputTitle,
-.PostInputTeamSize,
+.PostInputTeam,
 .PostInputStartDay,
 .PostInputEndDay{
   position: absolute;
   margin-left: 6%;
 }
 
-.teamSizeDropdown{
+.teamDropdown{
   width: 30%;
   padding: 10px;
   font-size: 16px;
@@ -45,7 +45,7 @@
   margin-bottom: 10%;
 }
 
-.teamSizeDropdown:focus,
+.teamDropdown:focus,
 .projectTextarea:focus{
   border-color: #4198FF;
   outline: none;
