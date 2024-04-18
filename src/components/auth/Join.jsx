@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from "react";  
 import '../../css/auth/Join.css'
 import { IoCamera } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
