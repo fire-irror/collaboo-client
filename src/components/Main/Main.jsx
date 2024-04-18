@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
-import Mainlogo from '../../assets/header.svg'
-import '../../css/Main/Main.css'
+import React, { useEffect, useState } from "react";
+import Mainlogo from '../../assets/header.svg';
+import '../../css/Main/Main.css';
 import { LuBell } from "react-icons/lu";
-import { useState } from "react";
 import axios from "axios";
-
 
 // 서버에서 받아온 데이터에서 날짜 형식을 변환하는 함수
 const formatProjectData = (projects) => {
@@ -13,25 +11,24 @@ const formatProjectData = (projects) => {
       ...project,
       start: new Date(project.start).toLocaleDateString(),
       end: new Date(project.end).toLocaleDateString()
-    }
+    };
   });
-}
-
+};
 
 export default function Main() {
-  const [project, setProject] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    async function fetchProjects() {
+    async function GetProject() {
       try {
         const response = await axios.get('http://localhost:8080/projects');
         const formattedProjects = formatProjectData(response.data);
-        setProject(formattedProjects);
+        setProjects(formattedProjects);
       } catch (err) {
         console.error('프로젝트 목록을 가져오는 데 실패했습니다.', err);
       }
     }
-    fetchProjects();
+    GetProject();
   }, []);
 
   return (
@@ -41,15 +38,17 @@ export default function Main() {
         <LuBell size={25} className="Bell" />
       </div>
       <hr />
-      <div className="ProjectBox">
-        {project.map(project => (
-          <div key={project.id}>
-            <h3>{project.project}</h3>
-            <p>{project.description}</p>
-            <p>{project.start}~{project.end}</p>
-          </div>
-        ))}
-      </div>
+      {projects.length > 0 && ( // Only render ProjectBox if projects exist
+        <div className="ProjectBox">
+          {projects.map(project => (
+            <div key={project.id}>
+              <h3>{project.project}</h3>
+              <p>{project.description}</p>
+              <p>{project.start}~{project.end}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-  )
+  );
 }
