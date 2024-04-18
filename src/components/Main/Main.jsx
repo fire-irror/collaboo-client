@@ -18,18 +18,23 @@ const formatProjectData = (projects) => {
 export default function Main() {
   const [projects, setProjects] = useState([]);
 
+  //여기서 한 번만 불러서 가져오기
   useEffect(() => {
-    async function GetProject() {
-      try {
-        const response = await axios.get('http://localhost:8080/projects');
-        const formattedProjects = formatProjectData(response.data);
-        setProjects(formattedProjects);
-      } catch (err) {
-        console.error('프로젝트 목록을 가져오는 데 실패했습니다.', err);
-      }
+    fetchProjects();
+  }, []); 
+
+
+  //서버랑 연동
+  const fetchProjects = async () => {
+    try {
+      const response = await axios.get('http://localhost:8080/projects');
+      const formattedProjects = formatProjectData(response.data);
+      setProjects(formattedProjects);
+    } catch (err) {
+      console.error('프로젝트 목록을 가져오는 데 실패했습니다.', err);
     }
-    GetProject();
-  }, []);
+  };
+
 
   return (
     <div>
@@ -38,17 +43,13 @@ export default function Main() {
         <LuBell size={25} className="Bell" />
       </div>
       <hr />
-      {projects.length > 0 && ( // Only render ProjectBox if projects exist
-        <div className="ProjectBox">
-          {projects.map(project => (
-            <div key={project.id}>
-              <h3>{project.project}</h3>
-              <p>{project.description}</p>
-              <p>{project.start}~{project.end}</p>
-            </div>
-          ))}
+      {projects.map(project => (
+        <div key={project.id} className="ProjectBox">
+          <h3>{project.project}</h3>
+          <p>{project.description}</p>
+          <p>{project.start}~{project.end}</p>
         </div>
-      )}
+      ))}
     </div>
   );
 }
