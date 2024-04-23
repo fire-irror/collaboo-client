@@ -1,0 +1,78 @@
+.WrapPostBoard{
+  margin-top: 10%;
+}
+
+
+.PostBoardTitle{
+  position: absolute;
+  top: 7%;
+  margin-left: 38%; 
+}
+
+.PostCategoryDropdown{
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 8%;
+  margin-left: 5%;
+  border: 1px solid #9D9D9D;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  margin-bottom: 10%;
+}
+
+.PostCategoryDropdown:focus,
+.PostBoardTextarea:focus{
+  border-color: #4198FF;
+  outline: none;
+  border-width: 2px;
+}
+
+.PostCategory{
+  position: absolute;
+  margin-left: 6%;
+}
+
+.PostBoardName{
+  width: 320px;
+  height: 49px;
+  margin-left: 5%;
+  border-radius: 10px;
+  border-style: solid;
+  margin-bottom: 3%;
+  margin-top: 7%;
+  border-color: rgba(0, 0, 0, 0.34);
+  border-width: 1px;
+  padding-left:15px ;
+}
+
+.PostBoardInputTitle{
+  position: absolute;
+  margin-left: 6%;
+}
+
+.PostBoardTextarea{
+  border: 1px solid #9D9D9D;
+  padding: 13%;
+  width: 63%;
+  /* margin-bottom: 8%; */
+}
+
+.PostBoardContent,
+.PostBoardTextarea{
+  margin-top: 3%;
+  margin-left: 5%;
+  border-radius: 7px;
+}
+
+.postBoardCreate{
+  width: 340px;
+  height: 45px;
+  margin-left: 5%;
+  border-radius: 10px;
+  border-style: solid;
+  border: none;
+  color: #fff;
+  background-color: #4198FF;
+}

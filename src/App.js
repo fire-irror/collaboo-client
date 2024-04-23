@@ -6,6 +6,8 @@ import SplashScreen from './pages/SplashScreen';
 import MainPage from './pages/MainPage';
 import PostPage from './pages/PostPage';
 import ProjectPage from './pages/ProjectPage';
+import NoticeBoardPage from './pages/NoticeBoardPage';
+import PostBoardPage from './pages/PostBoardPage';
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path='/main' element={<MainPage/>} />
         <Route path='/post' element={<PostPage/>} />
         <Route path='/project' element={<ProjectPage/>} />
+        <Route path='/noticeboard' element={<NoticeBoardPage/>} />
+        <Route path='/postBoard' element={<PostBoardPage/>} />
       </Routes>
     </Router>
   );

@@ -7,7 +7,6 @@ import "../../css/Post/Post.css";
 
 export default function Post() {
   const navigate = useNavigate();
-  // const [teamSize, setTeamSize] = useState(1);
   const [project, setProject] = useState("");
   const [teams, setTeams] = useState(1);
   const [description, setDescription] = useState("");

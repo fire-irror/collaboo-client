@@ -45,14 +45,14 @@ export default function Nav() {
   }
 
   const handleChatClick = () => {
-    setActiveIcon('chat');
+    navigate('/noticeboard');
   }
 
   return (
     <div className='Nav_bar'>
       <IoHomeOutline size='25' color={activeIcon === 'home' ? '#4198FF' : '#000'} onClick={handelHomeButtonClick} />
       <IoMdSearch size='25' color={activeIcon === 'search' ? '#4198FF' : '#000'} onClick={handleSearchClick} />
-      <AiFillPlusCircle size='40' color={activeIcon === 'plus' ? '#4198FF' : '#4198FF'} onClick={handlePlusButtonClick} />
+      <AiFillPlusCircle size='35' color={activeIcon === 'plus' ? '#4198FF' : '#4198FF'} onClick={handlePlusButtonClick} />
       <IoChatbubblesOutline size='25' color={activeIcon === 'chat' ? '#4198FF' : '#000'} onClick={handleChatClick} />
       <BsPerson size='25' color={activeIcon === 'mypage' ? '#4198FF' : '#000'} onClick={handleMypageClick} />
     </div>
