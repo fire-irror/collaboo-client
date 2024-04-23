@@ -25,10 +25,13 @@
 }
 
 .PostInputTitle,
-.PostInputTeam,
+.PostInputTeam{
+  position: absolute;
+  margin-left: 6%;
+}
+
 .PostInputStartDay,
 .PostInputEndDay{
-  position: absolute;
   margin-left: 6%;
 }
 
@@ -92,7 +95,7 @@
 .datePickerWrapper1,
 .datePickerWrapper2{
   margin-left: 5%;
-  margin-top: 8%;
+  margin-top: 3%;
   width: 335px;
   height: 40px;
   padding-top: 1%;
@@ -103,7 +106,7 @@
 }
 
 .datePickerWrapper2{
-  margin-top: 11%;
+  /* margin-top: 11%; */
 }
 
 .startDataPicker,
@@ -112,7 +115,6 @@
   margin-top: 2%;
   margin-left: 2%;
 }
-
 
 
 

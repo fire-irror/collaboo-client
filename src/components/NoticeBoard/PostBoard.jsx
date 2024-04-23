@@ -12,7 +12,6 @@ export default function PostBoard() {
 
   const handlePostBoardCreate = async () => {
     const PostedBoard = {
-      // id: null,
       title: title,
       category: category,
       code: code,
